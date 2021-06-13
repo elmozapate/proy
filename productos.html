@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productos</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+
+
+</head>
+
+<body>
+    <!-- titulo-encabezado -->
+
+    <header class="main-header">
+        <h1 class="main-header__title">ADMINISTRACION DE INVENTARIO</h1>
+    </header>
+
+
+    <div class="wrap-content">
+        <!-- barra-lateral-->
+        <section class="side-bar">
+            <figure class="full-width">
+                <div class="img-wrap">
+                    <img src="img\icono Moet.png" alt="logo" class="img-responsive ">
+                </div>
+                <figcaption class=" hide-on-mobile ">
+                    <span>
+                        Moet Zapata<br>
+                        <small>Admin</small>
+                    </span>
+                </figcaption>
+            </figure>
+            <div class="menu-title">
+                <div class="toggle-icon">
+                    <i class="fas fa-sliders-h"></i>
+                </div>
+                <span class="hide-on-mobile">Menu</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="link">
+                    <div class="icons-menu">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class=" hide-on-mobile">
+                        INICIO
+                    </div>
+                </a>
+                <a href="products.html" class="link">
+                    <div class="icons-menu">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="hide-on-mobile">
+                        PRODUCTOS
+                    </div>
+                </a>
+                <a href="inventory.html" class="link">
+                    <div class="icons-menu">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="hide-on-mobile">
+                        INVENTARIO
+                    </div>
+                </a>
+            </nav>
+        </section>        
+
+        <main class="main-container">
+            <section class="product-options">
+                <p><b>Que quieres hacer?</b> </p>
+                <input class="active-btn" value="AÑADIR PRODUCTO" type="submit" >
+                <input class="btn-inactive" value="EDITAR PRODUCTO" type="submit" >
+                
+            </section>
+            <section id="new-product" class="new-product">
+                <header class="forms-titles">
+                    <h2>PRODUCTO NUEVO</h2>
+                </header>
+                <form name="crear-producto" action="">
+                    <div class="form-container">
+                        <div class="basic-information">
+                            <h3 class="">Informacion Basica</h3>
+                            <div class="form-fields">
+                                <label class="form-field-label" for="product-code">Codigo</label>
+                                <input class="form-field-input" type="number" id="product-code">
+                            </div>
+                            <div class="form-fields">
+                                <label class="form-field-label" for="product-name">Nombre</label>
+                                <input class="form-field-input" type="text" id="product-name">
+                            </div>
+                            <div class="form-fields">
+                                <label class="form-field-label" for="product-brand">Marca</label>
+                                <input class="form-field-input" type="text" id="product-brand">
+                            </div>
+                            <div class="form-fields">
+                                <select class="">
+                                    <option value="" disabled="" selected="">Categoria</option>
+                                    <option value="">Categoria 1</option>
+                                    <option value="">Categoria 2</option>
+                                    <option value="">Categoria 3</option>
+                                    <option value="">Categoria 4</option>
+                                    <option value="">Categoria 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="price-and-stock">
+                            <h3 class="">Unidades y Precio</h3>
+                            <div class="form-fields">
+                                <label class="form-field-label" for="product-stock">Unidades</label>
+                                <input class="form-field-input" type="number" id="product-stock">
+                            </div>
+                            <div class="form-fields">
+                                <label class="form-field-label" for="product-purchace-price">Precio de Compra</label>
+                                <input class="form-field-input" type="number" id="product-purchace-price">
+                            </div>
+                            <div class="form-fields">
+                                <label class="form-field-label" for="product-sale-price">Precio de Venta</label>
+                                <input class="form-field-input" type="number" id="product-sale-price">
+                            </div>
+                        </div>
+                        <div class="description-and-img">
+                            <h3 class="">Descripcion e imagen</h3>
+                            <div class="form-fields">
+                                <textarea name="product-description" placeholder="Especificaciones"
+                                    id="product-description" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="form-fields">
+                                <label class="form-field-label" for="product-img">Imagen del Producto</label>
+                                <input type="file" id="product-img">
+                            </div>
+                            <div class="submit-btn-field">
+                                <input class="submit-btn" type="submit" value="Crear Producto">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section id="edit-product" class="edit-product">
+                <header class="forms-titles">
+                    <h2>EDITAR PRODUCTO</h2>
+                </header>
+                <form action="">
+
+                </form>
+                <form action="">
+                    <div class="form-container">
+                        <div class="search-container">
+                            <h3 class="">Buscar</h3>
+                            <div class="form-fields">
+                                <label class="form-field-label" for="product-code">Codigo</label>
+                                <input class="form-field-input" type="search" id="product-code">
+                            </div>
+                            <div class="form-fields">
+                                <label class="form-field-label" for="product-name">Nombre</label>
+                                <input class="form-field-input" type="search" id="product-name">
+                            </div>
+                        </div>
+                        <div class="basic-information">
+                            <h3 class="">Informacion Basica</h3>
+                            <div class="form-fields">
+                                <label class="form-field-label" for="product-code">Codigo</label>
+                                <input class="form-field-input" type="number" id="product-code">
+                            </div>
+                            <div class="form-fields">
+                                <label class="form-field-label" for="product-name">Nombre</label>
+                                <input class="form-field-input" type="text" id="product-name">
+                            </div>
+                            <div class="form-fields">
+                                <label class="form-field-label" for="product-brand">Marca</label>
+                                <input class="form-field-input" type="text" id="product-brand">
+                            </div>
+                            <div class="form-fields">
+                                <select class="">
+                                    <option value="" disabled="" selected="">Categoria</option>
+                                    <option value="">Categoria 1</option>
+                                    <option value="">Categoria 2</option>
+                                    <option value="">Categoria 3</option>
+                                    <option value="">Categoria 4</option>
+                                    <option value="">Categoria 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="price-and-stock">
+                            <h3 class="">Unidades y Precio</h3>
+                            <div class="form-fields">
+                                <label class="form-field-label" for="product-stock">Unidades</label>
+                                <input class="form-field-input" type="number" id="product-stock">
+                            </div>
+                            <div class="form-fields">
+                                <label class="form-field-label" for="product-purchace-price">Precio de Compra</label>
+                                <input class="form-field-input" type="number" id="product-purchace-price">
+                            </div>
+                            <div class="form-fields">
+                                <label class="form-field-label" for="product-sale-price">Precio de Venta</label>
+                                <input class="form-field-input" type="number" id="product-sale-price">
+                            </div>
+                        </div>
+                        <div class="description-and-img">
+                            <h3 class="">Descripcion e imagen</h3>
+                            <div class="form-fields">
+                                <textarea name="product-description" placeholder="Especificaciones"
+                                    id="product-description" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="form-fields">
+                                <label class="form-field-label" for="product-img">Imagen del Producto</label>
+                                <input type="file" id="product-img">
+                            </div>
+                            <div class="submit-btn-field">
+                                <input class="submit-btn" type="submit" value="EDITAR PRODUCTO">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+        </main>
+    </div>
+
+
+</body>
+
+</html>
